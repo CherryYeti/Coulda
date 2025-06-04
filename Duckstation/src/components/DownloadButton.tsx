@@ -16,7 +16,7 @@ function DownloadButton({
           <img src={iconPath} height="16" width="16" className="h-4 w-4" />
         </span>
         {mainText}
-        <div className="ml-1 px-2 my-1 rounded-3xl bg-rose-400 group-hover:bg-white group-hover:text-black transition-colors duration-200">
+        <div className="ml-1 px-2 my-1 rounded-3xl bg-rose-400 group-hover:bg-white group-hover:text-black ">
           {badgeText}
         </div>
       </button>

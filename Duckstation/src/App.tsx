@@ -1,19 +1,19 @@
 import DownloadButton from "./components/DownloadButton";
 import Header from "./components/Header";
+import { useLanguage } from "./LanguageContext";
 
 function App() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Header />
       <div className="relative flex flex-col text-center items-center mt-16 z-50">
         <div className="flex flex-col md:flex-row justify-center items-center mb-16">
           <img src="ducko256.png" />
-          <h1 className=" text-6xl md:text-9xl">DuckStation</h1>
+          <h1 className=" text-6xl md:text-9xl">{t.duckstation}</h1>
         </div>
-        <p className="text-2xl px-8 md:px-0">
-          DuckStation is a PS1 Emulator aiming for the best accuracy and game
-          support.
-        </p>
+        <p className="text-2xl px-8 md:px-0">{t.description}</p>
         <div className="flex flex-col md:flex-row min-w-3xl mt-6 ">
           <div className="w-full md:w-1/4 flex flex-col items-center pb-8">
             <h3 className="text-3xl">Windows</h3>
@@ -80,13 +80,12 @@ function App() {
             />
           </div>
         </div>
-        <p className="pb-8">
-          View all downloads&nbsp;
+        <p>
           <a
-            className="underline hover:cursor-pointer"
+            className="underline hover:cursor-pointer pb-8 "
             href="https://github.com/stenzek/duckstation/releases/tag/latest"
           >
-            here!
+            {t.downloads}
           </a>
         </p>
       </div>
